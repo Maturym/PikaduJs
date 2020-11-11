@@ -5,6 +5,7 @@ body {
   font-family: sans-serif;
   background: #e5e5e5;
 }
+
 .header {
   background: #fa8c16;
   padding-top: 16px;
@@ -173,6 +174,7 @@ body {
   height: 34px;
   margin-left: 9px;
   border-radius: 4px;
+  object-fit: cover;
 }
 .author-username {
   display: block;
@@ -207,7 +209,7 @@ body {
   width: 100%;
 }
 
-.login-title{
+.login-title, .edit-title{
   text-align: center;
   margin-bottom: 10px;
   font-size: 16px;
@@ -246,6 +248,9 @@ button:hover{
   border: 1px solid #e8e8e8;
   padding: 15px 25px;
   display: none;
+}
+.user-container{
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -253,8 +258,10 @@ button:hover{
   display: flex;
   align-items: center;
   text-decoration: none;
+  /* margin-right: auto; */
 }
 .user-avatar {
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 17px;
 }
@@ -264,6 +271,51 @@ button:hover{
   line-height: 24px;
   color: #595959;
 }
+
+.edit{
+  margin-left: 130px;
+  margin-right: 15px;
+}
+
+.edit-container{
+  display: none;
+  text-align: center;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  padding: 15px 25px;
+  margin-top: 25px;
+}
+.edit-container.visible{
+  display: block;
+}
+
+.edit-label{
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: #595959;
+}
+
+.edit-input{
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  padding: 5px 15px;
+
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+.icon-edit {
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
+  margin-left: auto;
+}
+
 .icon-exit {
   width: 20px;
   height: 20px;
@@ -498,6 +550,7 @@ button:hover{
   .author-avatar {
     margin-left: 0;
     margin-right: 10px;
+  
   }
   .author-about {
     order: 2;
