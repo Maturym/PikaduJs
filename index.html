@@ -46,9 +46,75 @@
 
   <div class="content">
     <main class="posts">
-      <!--  -->
+      <section class="post">
+               <div class="post-body">
+                 <h2 class="post-title">Заголовок</h2>
+                 <p class="post-text">фпрфваидоирфмвадрофмидраомидыим ивдмр иыдвм</p>
+                 <div class="tags">
+          <a href="#${tag}" class="tag">#свежее</a>
+                 </div>
+               </div>
+               <div class="post-footer">
+                 <div class="post-buttons">
+                   <button class="post-button likes">
+                     <svg width="19" height="20" class="icon icon-like">
+                       <use xlink:href="img/icons.svg#like"></use>
+                     </svg>
+                     <span class="likes-counter">10</span>
+                   </button>
+                   <button class="post-button comments">
+                     <svg width="21" height="21" class="icon icon-comment">
+                       <use xlink:href="img/icons.svg#comment"></use>
+                     </svg>
+                     <span class="comments-counter">12</span>
+                   </button>
+                   <button class="post-button save">
+                     <svg width="19" height="19" class="icon icon-save">
+                       <use xlink:href="img/icons.svg#save"></use>
+                     </svg>
+                   </button>
+                   <button class="post-button share">
+                     <svg width="17" height="19" class="icon icon-share">
+                       <use xlink:href="img/icons.svg#share"></use>
+                     </svg>
+                  </button>
+                 </div>
+                 <div class="post-author">
+                   <div class="author-about">
+                     <a href="#" class="author-username">Kesha</a>
+                   </div>
+                     <span class="post-time">data</span>
+                 </div>
+                   <a href="#" class="author-link"><img src="img/avatar.jpeg" alt="avatar" class="author-avatar"></a>
+               </div> 
+             </section>   
     </main>
     <!-- /.posts -->
+    <form action="#" class="add-post">
+      <input type="text" name="title" class="add-title" placeholder="Заголовок поста">
+      <textarea name="text" class="add-text" placeholder="Текст вашего поста"></textarea>
+      <input type="text" name="tags" class="add-tags" placeholder="Добавьте теги">
+      <div class="add-buttons">
+        <button type="submit" class="button add-button">
+          <svg class="icon icon-fire">
+            <use xlink:href="img/icons.svg#fire"></use>
+          </svg>
+          Опубликовать пост
+        </button>
+        <button class="button button-outline">
+          <svg class="icon icon-video">
+            <use xlink:href="img/icons.svg#video"></use>
+          </svg>
+          Видео
+        </button>
+        <button class="button button-outline">
+          <svg class="icon icon-photo">
+            <use xlink:href="img/icons.svg#photo"></use>
+          </svg>
+          Фото
+        </button>
+      </div>
+    </form>
     <aside class="sidebar">
       <div class="login">
         <form class="login-form">
@@ -146,6 +212,7 @@
         </svg>
         Опубликовать пост
       </a>
+     <div class="card-ad-wrapper">
       <div class="card">
         <div class="card-header">
           <h2 class="card-title">Комментарий дня</h2>
@@ -161,6 +228,7 @@
       <!-- /.card -->
       <a href="#" class="ad"></a>
     </aside>
+     </div>
     <!-- /.sidebar -->
   </div>
   <!-- /.content -->
