@@ -278,14 +278,10 @@ const showAllPosts = () => {
 
   postsWrapper.innerHTML = '';
 
-  console.log(setPosts.filteredByAuthor);
 
     if (setPosts.filteredByTag.length === 0 && setPosts.filteredByAuthor.length === 0){
       setPosts.allPosts.forEach(({ title, text, like, comments, author, date, tags }) => {
 
-        //   // const isAuthor = setUsers.getUser(author).displayName;
-      
-        //   // const isAvatar = setUsers.getUser(author).photo;
           postHTML = `
             <section class="post">
               <div class="post-body">
@@ -471,7 +467,7 @@ const showAllPosts = () => {
 
   tagsLinks.forEach((item) => {
     item.addEventListener('click', e => {
-      e.preventDefault();
+
       target = e.target.textContent.slice(1);
 
       const filteredArray = setPosts.allPosts.filter(item => {
@@ -479,9 +475,8 @@ const showAllPosts = () => {
           return item;
         }
       });
-
       setPosts.filteredPosts(filteredArray, showAllPosts);
-
+      document.documentElement.scrollTop = 0;
     })
   });     
 
@@ -489,7 +484,6 @@ const showAllPosts = () => {
 
   authorName.forEach((item) => {
     item.addEventListener('click', e => {
-      e.preventDefault();
       target = e.target.textContent;
 
       const filteredArray = setPosts.allPosts.filter(item => {
@@ -499,6 +493,7 @@ const showAllPosts = () => {
       });
 
       setPosts.filteredPostsByAuthor(filteredArray, showAllPosts);
+      document.documentElement.scrollTop = 0;
 
     })
   });
