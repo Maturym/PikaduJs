@@ -126,6 +126,8 @@ body {
   line-height: 22px;
 }
 .tags {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 22px;
 }
 .tag {
